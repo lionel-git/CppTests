@@ -5,6 +5,13 @@ extern void test_map_wrapper();
 
 int main(int argc, char **argv)
 {
-    test_map_wrapper();
+    try
+    {
+        test_map_wrapper();
+    }
+    catch (const std::exception& ex)
+    {
+        std::cerr << "Exception: " << ex.what() << std::endl;
+    }
     return 0;
 }

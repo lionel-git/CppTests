@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <memory>
+#include <format>
 
 // Wraps a map of unique pointers to objects of type T
 // With auto initialization of the unique pointers when accessed via operator[]
@@ -8,7 +9,7 @@ template<typename T>
 class MapWrapper
 {
 public:
-    MapWrapper(bool initOnNullPtr) : initOnNullPtr_(initOnNullPtr) {}
+    MapWrapper(bool initOnNullPtr, bool throwOnNullPtr) : initOnNullPtr_(initOnNullPtr), throwOnNullPtr_(throwOnNullPtr) {}
 
     std::unique_ptr<T>& operator[](const std::string& key)
     {
@@ -18,8 +19,13 @@ public:
             map_[key] = std::make_unique<T>();
             it = map_.find(key);
         }
-        if (it->second == nullptr && initOnNullPtr_)
-            it->second = std::make_unique<T>();
+        if (it->second == nullptr)
+        {
+            if (throwOnNullPtr_)
+                throw std::runtime_error(std::format("Null pointer access for key '{}'", key));
+            if (initOnNullPtr_)
+                it->second = std::make_unique<T>();
+        }
         return it->second;
     }
 
@@ -32,6 +38,7 @@ public:
 private:
     std::map<std::string, std::unique_ptr<T>> map_;
     bool initOnNullPtr_{ false };
+    bool throwOnNullPtr_{ false };
 };
 
 struct TestObject
@@ -42,10 +49,10 @@ struct TestObject
     }
 };
 
-void test_map_wrapper_init(bool init_value)
+void test_map_wrapper_init(bool initOnNullPtr, bool throwOnNullPtr)
 {
-    std::cout << "Testing map wrapper init=" << init_value << std::endl;
-    MapWrapper<TestObject> wrapper(init_value);
+    std::cout << "Testing map wrapper init=" << initOnNullPtr << " throw=" << throwOnNullPtr << std::endl;
+    MapWrapper<TestObject> wrapper(initOnNullPtr, throwOnNullPtr);
 
     const std::string mykey = "toto";
     std::cout << "isempty: " << wrapper.isEmpty(mykey) << std::endl; // Should print false, as the key exists and is not empty
@@ -63,6 +70,7 @@ void test_map_wrapper_init(bool init_value)
 
 void test_map_wrapper()
 {
-    test_map_wrapper_init(true); // Test with auto-initialization enabled    
-    test_map_wrapper_init(false); // Test with auto-initialization disabled
+    test_map_wrapper_init(true, false); // Test with auto-initialization enabled    
+    test_map_wrapper_init(false, false); // Test with auto-initialization disabled
+    test_map_wrapper_init(false, true); // Test with auto-initialization disabled and throw on null pointer    
 }
