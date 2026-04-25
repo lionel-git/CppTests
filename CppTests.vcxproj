@@ -128,7 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mytype.h" />
+    <ClCompile Include="test_alias.cpp" />
+    <ClCompile Include="test_distance.cpp" />
     <ClCompile Include="test_map_wrapper.cpp" />
+    <ClCompile Include="test_alias2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
