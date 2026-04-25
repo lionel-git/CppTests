@@ -18,6 +18,7 @@ int main(int argc, char **argv)
         //test_map_wrapper();
         test_distance();
         size_t alias_result = tester::test_alias2();
+        size_t alias_result2 = test_alias();
     }
     catch (const std::exception& ex)
     {
