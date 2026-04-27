@@ -1,0 +1,8 @@
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+<Type Name="VectorWrapper&lt;*&gt;">
+    <DisplayString>{{ size={ data_.size() } }}</DisplayString>
+    <Expand>
+        <ExpandedItem>data_</ExpandedItem>
+    </Expand>
+</Type>
+    </AutoVisualizer>

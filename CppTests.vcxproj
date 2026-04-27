@@ -134,6 +134,12 @@
     <ClCompile Include="test_map_wrapper.cpp" />
     <ClCompile Include="test_alias2.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vectorString.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="My_Display.natvis" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

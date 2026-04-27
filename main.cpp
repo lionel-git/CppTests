@@ -9,7 +9,9 @@ extern size_t test_alias();
 namespace tester
 {
     extern size_t test_alias2();
+    extern size_t test_alias3();
 }
+
 
 int main(int argc, char **argv)
 {
@@ -17,8 +19,9 @@ int main(int argc, char **argv)
     {
         //test_map_wrapper();
         test_distance();
-        size_t alias_result = tester::test_alias2();
-        size_t alias_result2 = test_alias();
+        size_t alias_result2 = tester::test_alias2();
+        size_t alias_result3 = tester::test_alias3();
+        size_t alias_result4 = test_alias();
     }
     catch (const std::exception& ex)
     {
