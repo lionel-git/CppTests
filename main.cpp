@@ -12,11 +12,16 @@ namespace tester
     extern size_t test_alias3();
 }
 
-
+extern  void test_operator();
+extern void test_enum();
 int main(int argc, char **argv)
 {
     try
     {
+        test_enum(); return 0;
+
+        test_operator(); return 0;
+
         //test_map_wrapper();
         test_distance();
         size_t alias_result2 = tester::test_alias2();

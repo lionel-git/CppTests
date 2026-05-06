@@ -127,8 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="divers.cpp" />
+    <ClCompile Include="EnumTemplates.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mytype.h" />
+    <ClCompile Include="testctor.cpp" />
     <ClCompile Include="test_alias.cpp" />
     <ClCompile Include="test_distance.cpp" />
     <ClCompile Include="test_map_wrapper.cpp" />

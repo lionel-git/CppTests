@@ -33,6 +33,15 @@
     <ClCompile Include="test_alias2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="divers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testctor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumTemplates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vectorString.h">
