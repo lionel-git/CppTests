@@ -14,10 +14,16 @@ namespace tester
 
 extern  void test_operator();
 extern void test_enum();
+
+extern void test_static_init();
+
 int main(int argc, char **argv)
 {
     try
     {
+
+        test_static_init(); return 0;
+
         test_enum(); return 0;
 
         test_operator(); return 0;

@@ -68,26 +68,28 @@ void showAllColors()
     std::cout << "====" << std::endl;
 }
 
+template <typename EnumType>
+constexpr EnumType next(EnumType current)
+{
+    return (EnumType)((int)(current) + 1);
+};
+
+
 template<Color c>
 void displayLoop() 
 {
     //Execute some code
     std::cout << convertEnum(c) << ": " << getAssociatedObject<c>() << std::endl;
-    //Recurse
-    displayLoop<(Color)((int)(c)+1)>();
+    //Iterate
+    displayLoop<next<Color>(c)>();
 }
-
-template<>
-void displayLoop<Color::Invalid>() {
-}
-
 template<>
 void displayLoop<Color::LastEnum>() {
 }
 
 void displayLoopColors()
 {
-    displayLoop<(Color)(1)>();
+    displayLoop<next<Color>(Color::Invalid)>();
 }
 
 void showObjects()
@@ -95,6 +97,14 @@ void showObjects()
     std::cout << "Associated Objects:" << std::endl;
     displayLoopColors();
     std::cout << "====" << std::endl;
+}
+
+void test_load()
+{
+    Color value = Color::Red;
+    // Pb load dynmically the associated object for a given enum value, we need to use a switch or if-else chain, which is not ideal and can lead to maintenance issues as the enum grows.
+//    getAssociatedObject<value>();
+
 }
 
 void test_enum()

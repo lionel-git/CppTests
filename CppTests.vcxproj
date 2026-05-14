@@ -131,6 +131,7 @@
     <ClCompile Include="EnumTemplates.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mytype.h" />
+    <ClCompile Include="static_init.cpp" />
     <ClCompile Include="testctor.cpp" />
     <ClCompile Include="test_alias.cpp" />
     <ClCompile Include="test_distance.cpp" />
