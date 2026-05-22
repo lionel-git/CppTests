@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="copy_ctor.cpp" />
     <ClCompile Include="divers.cpp" />
     <ClCompile Include="EnumTemplates.cpp" />
     <ClCompile Include="main.cpp" />

@@ -17,10 +17,13 @@ extern void test_enum();
 
 extern void test_static_init();
 
+extern void test_copy_ctor();
+
 int main(int argc, char **argv)
 {
     try
     {
+        test_copy_ctor(); return 0;
 
         test_static_init(); return 0;
 
