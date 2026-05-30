@@ -141,6 +141,7 @@
     <ClCompile Include="test_distance.cpp" />
     <ClCompile Include="test_map_wrapper.cpp" />
     <ClCompile Include="test_alias2.cpp" />
+    <ClCompile Include="test_ope_egal.cpp" />
     <ClCompile Include="test_template.cpp" />
     <ClCompile Include="worker.cpp" />
   </ItemGroup>

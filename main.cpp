@@ -24,10 +24,15 @@ extern void test_bad_alloc();
 extern void test_template();
 
 extern void test_enum_iter();
+
+extern void test_ope_egal();
+
 int main(int argc, char **argv)
 {
     try
     {
+        test_ope_egal(); return 0;
+
         test_enum_iter(); return 0;
 
         test_template(); return 0;
