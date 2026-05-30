@@ -19,10 +19,21 @@ extern void test_static_init();
 
 extern void test_copy_ctor();
 
+extern void test_bad_alloc();
+
+extern void test_template();
+
+extern void test_enum_iter();
 int main(int argc, char **argv)
 {
     try
     {
+        test_enum_iter(); return 0;
+
+        test_template(); return 0;
+
+        test_bad_alloc(); return 0;
+
         test_copy_ctor(); return 0;
 
         test_static_init(); return 0;

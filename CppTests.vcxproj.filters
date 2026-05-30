@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\test_template">
+      <UniqueIdentifier>{b6849317-f7da-45e6-8985-fa6daa4f29d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,10 +51,31 @@
     <ClCompile Include="copy_ctor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test_bad_allocation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_template.cpp">
+      <Filter>Source Files\test_template</Filter>
+    </ClCompile>
+    <ClCompile Include="worker.cpp">
+      <Filter>Source Files\test_template</Filter>
+    </ClCompile>
+    <ClCompile Include="sc_list.cpp">
+      <Filter>Source Files\test_template</Filter>
+    </ClCompile>
+    <ClCompile Include="enum_iter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vectorString.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="worker.h">
+      <Filter>Source Files\test_template</Filter>
+    </ClInclude>
+    <ClInclude Include="sc_list.h">
+      <Filter>Source Files\test_template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

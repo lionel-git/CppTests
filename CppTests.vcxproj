@@ -130,17 +130,24 @@
     <ClCompile Include="copy_ctor.cpp" />
     <ClCompile Include="divers.cpp" />
     <ClCompile Include="EnumTemplates.cpp" />
+    <ClCompile Include="enum_iter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mytype.h" />
+    <ClCompile Include="sc_list.cpp" />
     <ClCompile Include="static_init.cpp" />
     <ClCompile Include="testctor.cpp" />
     <ClCompile Include="test_alias.cpp" />
+    <ClCompile Include="test_bad_allocation.cpp" />
     <ClCompile Include="test_distance.cpp" />
     <ClCompile Include="test_map_wrapper.cpp" />
     <ClCompile Include="test_alias2.cpp" />
+    <ClCompile Include="test_template.cpp" />
+    <ClCompile Include="worker.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="sc_list.h" />
     <ClInclude Include="vectorString.h" />
+    <ClInclude Include="worker.h" />
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="My_Display.natvis" />
