@@ -69,6 +69,9 @@
     <ClCompile Include="test_ope_egal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test_assing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vectorString.h">

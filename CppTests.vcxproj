@@ -137,6 +137,7 @@
     <ClCompile Include="static_init.cpp" />
     <ClCompile Include="testctor.cpp" />
     <ClCompile Include="test_alias.cpp" />
+    <ClCompile Include="test_assing.cpp" />
     <ClCompile Include="test_bad_allocation.cpp" />
     <ClCompile Include="test_distance.cpp" />
     <ClCompile Include="test_map_wrapper.cpp" />
