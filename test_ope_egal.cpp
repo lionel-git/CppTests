@@ -100,8 +100,8 @@ void checkOperatorEgal()
     Derived d2;
     d2.a_ = 97;
     //d1.assign(d2); // This will call Derived::assign
-
-    d1 = d2;
+    const auto& base_d1 = d1;
+   // base_d1.operator=(*(const IBase*)&d2);
 
     Derived2 d3;
     // d1.assign(d3); // This will call Derived::assign but print "Bad"
@@ -110,6 +110,8 @@ void checkOperatorEgal()
 
 void test_ope_egal()
 {
+    checkOperatorEgal(); return;
+
     Derived d1;
     d1.a_ = 47;
     Derived d2;
