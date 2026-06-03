@@ -27,10 +27,18 @@ extern void test_enum_iter();
 
 extern void test_ope_egal();
 
+namespace ns_test_dyn_cast
+{
+    extern void test_dyn_cast();
+
+}
+
 int main(int argc, char **argv)
 {
     try
     {
+        ns_test_dyn_cast::test_dyn_cast(); return 0;
+
         test_ope_egal(); return 0;
 
         test_enum_iter(); return 0;
