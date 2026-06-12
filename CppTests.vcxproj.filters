@@ -75,6 +75,9 @@
     <ClCompile Include="dyn_cast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="demangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vectorString.h">

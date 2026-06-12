@@ -33,10 +33,14 @@ namespace ns_test_dyn_cast
 
 }
 
+extern void test_demangle();
+
 int main(int argc, char **argv)
 {
     try
     {
+        test_demangle(); return 0;
+
         ns_test_dyn_cast::test_dyn_cast(); return 0;
 
         test_ope_egal(); return 0;
