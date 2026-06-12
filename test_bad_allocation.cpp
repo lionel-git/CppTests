@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <iostream>
+#include <memory>
 
 void test_bad_alloc()
 {
