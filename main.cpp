@@ -35,10 +35,17 @@ namespace ns_test_dyn_cast
 
 extern void test_demangle();
 
+extern void test_noex();
+
+extern void test_vector_at();
+
 int main(int argc, char **argv)
 {
     try
     {
+        test_vector_at(); return 0;
+		test_noex(); return 0;
+
         test_demangle(); return 0;
 
         ns_test_dyn_cast::test_dyn_cast(); return 0;
@@ -69,5 +76,9 @@ int main(int argc, char **argv)
     {
         std::cerr << "Exception: " << ex.what() << std::endl;
     }
+
+    //Check without handler
+    test_vector_at(); return 0;
+
     return 0;
 }

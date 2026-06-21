@@ -78,6 +78,12 @@
     <ClCompile Include="demangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="noex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vector_at.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vectorString.h">

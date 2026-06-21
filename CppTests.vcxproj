@@ -135,6 +135,7 @@
     <ClCompile Include="enum_iter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mytype.h" />
+    <ClCompile Include="noex.cpp" />
     <ClCompile Include="sc_list.cpp" />
     <ClCompile Include="static_init.cpp" />
     <ClCompile Include="testctor.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="test_alias2.cpp" />
     <ClCompile Include="test_ope_egal.cpp" />
     <ClCompile Include="test_template.cpp" />
+    <ClCompile Include="vector_at.cpp" />
     <ClCompile Include="worker.cpp" />
   </ItemGroup>
   <ItemGroup>
